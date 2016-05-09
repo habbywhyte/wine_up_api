@@ -1,6 +1,7 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Food.all.order(:created_at)
+    @foods = Food.all.order(:created_at) do
+      @wine_types = Winetype.find_all 
 
     render json: @foods.to_json, status: :ok
   end

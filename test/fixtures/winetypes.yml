@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typeofwine: MyText
+  graphic_url: MyText
+  food_id: 
+
+two:
+  typeofwine: MyText
+  graphic_url: MyText
+  food_id: 

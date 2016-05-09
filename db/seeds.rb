@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+Winetype.destroy_all
 Food.destroy_all
 	Food.create({
         name: "vegetables",
@@ -52,6 +52,171 @@ Food.destroy_all
         name: "sweets",
         photo_url: "",
 	})
+
+foods = Food.all
 	
+foods.each do |food|
+	case food.name
+	when "vegetables"
+		Winetype.create({
+			typeofwine: "Dry White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Sparkling",
+			food_id: food.id
+			})
+	when "roastedvegetables"
+		Winetype.create({
+			typeofwine: "Dry White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Light Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Medium Red",
+			food_id: food.id
+			})
+	when "soft cheese"
+		Winetype.create({
+			typeofwine: "Sweet White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Rich White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Sparkling",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Dessert",
+			food_id: food.id
+			})
+	when "hard cheese"
+		Winetype.create({
+			typeofwine: "Dry White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Medium Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Sparkling",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Bold Red",
+			food_id: food.id
+			})
+	when "starches"
+		Winetype.create({
+			typeofwine: "Dry White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Rich White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Sparkling",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Light Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Medium Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Bold Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Dessert",
+			food_id: food.id
+			})
+	when "fish"
+		Winetype.create({
+			typeofwine: "Dry White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Rich White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Sparkling",
+			food_id: food.id
+			})
+	when "rich fish"
+		Winetype.create({
+			typeofwine: "Light Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Rich White",
+			food_id: food.id
+			})
+	when "white meat"
+		Winetype.create({
+			typeofwine: "Rich White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Medium Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Light Red",
+			food_id: food.id
+			})
+	when "red meat"
+		Winetype.create({
+			typeofwine: "Medium Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Bold Red",
+			food_id: food.id
+			})
+	when "cured meat"
+		Winetype.create({
+			typeofwine: "Sweet White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Light Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Medium Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Bold Red",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Dessert",
+			food_id: food.id
+			})
+	when "sweets"
+		Winetype.create({
+			typeofwine: "Sweet White",
+			food_id: food.id
+			})
+		Winetype.create({
+			typeofwine: "Dessert",
+			food_id: food.id
+			})
+	else
 
-
+	end
+end
