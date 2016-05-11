@@ -30,6 +30,5 @@ module WineUpApi
         end
     end
         
-    end
   end
 end

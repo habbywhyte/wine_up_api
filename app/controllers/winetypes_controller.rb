@@ -1,40 +1,40 @@
 class WineTypesController < ApplicationController
   def index
     # @food = Food.find(params[:food_id])
-    @wine_types = Winetype.all.order(:created_at)
+    @winetypes = Winetype.all.order(:created_at)
 
-    render json: @wine_types.to_json, status: :ok
+    render json: @winetypes.to_json, status: :ok
   end
 
   def show
     @food = Food.find(params[:food_id])
-    @wine_types = Winetype.all.order(:created_at)
+    @winetypes = Winetype.all.order(:created_at)
 
-    render json: @wine_types.to_json, status: :ok
+    render json: @winetypes.to_json, status: :ok
   end
   def create
     @food = Food.find(params[:food_id])
-    @wine_type = @food.wine_types.build(wine_type_params)
+    @winetype = @food.winetypes.build(wine_type_params)
 
     if @wine_type.save
-      render json: @wine_type.to_json, status: :created
+      render json: @winetype.to_json, status: :created
     else
-      render json: @wine_type.errors, status: :unprocessable_entity
+      render json: @winetype.errors, status: :unprocessable_entity
     end
   end
 
   def update
-    @wine_type = Wine_Type.find(params[:id])
-    if @wine_type.update(wine_type_params)
-      render json: @wine_type.to_json, status: :ok
+    @winetype = Wine_Type.find(params[:id])
+    if @winetype.update(wine_type_params)
+      render json: @winetype.to_json, status: :ok
     else
-      render json: @wine_type.errors, status: :unprocessable_entity
+      render json: @winetype.errors, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @wine_type = Wine_Type.find(params[:id])
-    @wine_type.destroy
+    @winetype = Wine_Type.find(params[:id])
+    @winetype.destroy
     render json: {message: "success"}, status: :ok
   end
 
