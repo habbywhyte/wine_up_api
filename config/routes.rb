@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :foods
-  resources :wine_types
+  resources :winetypes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

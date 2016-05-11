@@ -1,7 +1,7 @@
-class CreateWineTypes < ActiveRecord::Migration
+class CreateWinetypes < ActiveRecord::Migration
   def change
-    create_table :wine_types do |t|
-      t.text :type
+    create_table :winetypes do |t|
+      t.text :typeofwine
       t.text :graphic_url
       t.references :food, index: true, foreign_key: true
 

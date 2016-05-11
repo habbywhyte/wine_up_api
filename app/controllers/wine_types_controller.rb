@@ -1,16 +1,20 @@
-class Wine_Types_Controller < ApplicationController
+class WineTypesController < ApplicationController
   def index
-    @wine_types = Wine_Type.all.order(:created_at)
+    # @food = Food.find(params[:food_id])
+    @wine_types = Winetype.all.order(:created_at)
 
     render json: @wine_types.to_json, status: :ok
   end
-  def show
-    @wine_type = Wine_Type.find(params[:id])
-    render json: @wine_type.to_json, status: :ok
-  end
 
+  def show
+    @food = Food.find(params[:food_id])
+    @wine_types = Winetype.all.order(:created_at)
+
+    render json: @wine_types.to_json, status: :ok
+  end
   def create
-    @wine_type = Wine_Type.new(wine_type_params)
+    @food = Food.find(params[:food_id])
+    @wine_type = @food.wine_types.build(wine_type_params)
 
     if @wine_type.save
       render json: @wine_type.to_json, status: :created
@@ -37,7 +41,8 @@ class Wine_Types_Controller < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def wine_type_params
-      params.require(:wine_type).permit(:type, :graphic)
+      params.require(:wine_type).permit(:type, :graphic_url, :food_id)
     end
 end
+
 
