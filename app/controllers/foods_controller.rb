@@ -3,7 +3,8 @@ class FoodsController < ApplicationController
     @foods = Food.all.order(:created_at) do
       @wine_types = Winetype.find_all 
 
-    render json: @foods.to_json, status: :ok
+    # render json: @foods.to_json, status: :ok
+    render json: @foods, :include => [:@winetypes], status: :ok
   end
   def show
     @food = Food.find(params[:id])

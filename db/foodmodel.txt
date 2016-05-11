@@ -1,0 +1,4 @@
+
+rails generate model food name:text photo_url:text
+
+rails generate model winetype typeofwine:text graphic_url:text food:references

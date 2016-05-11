@@ -10,47 +10,47 @@ Winetype.destroy_all
 Food.destroy_all
 	Food.create({
         name: "vegetables",
-        photo_url: "",
+        photo_url: "/app/assets/images/veggies.jpg",
 	})
 	Food.create({
         name: "roastedvegetables",
-        photo_url: "",
+        photo_url: "/app/assets/images/roastedveggies.jpg",
 	})
 	Food.create({
         name: "soft cheese",
-        photo_url: "",
+        photo_url: "/app/assets/images/softcheese.jpg",
 	})
 	Food.create({
         name: "hard cheese",
-        photo_url: "",
+        photo_url: "/app/assets/images/hardcheese.jpg",
 	})
 	Food.create({
         name: "starches",
-        photo_url: "",
+        photo_url: "/app/assets/images/starches.jpg",
 	})
 	Food.create({
         name: "fish",
-        photo_url: "",
+        photo_url: "/app/assets/images/fish.jpg",
 	})
 	Food.create({
         name: "rich fish",
-        photo_url: "",
+        photo_url: "/app/assets/images/richfish.jpg",
 	})
 	Food.create({
         name: "red meat",
-        photo_url: "",
+        photo_url: "/app/assets/images/porterhouse.jpg",
 	})
 	Food.create({
         name: "white meat",
-        photo_url: "",
+        photo_url: "/app/assets/images/whitemeat.jpg",
 	})
 	Food.create({
         name: "cured meat",
-        photo_url: "",
+        photo_url: "/app/assets/images/curedmeat.jpg",
 	})
 	Food.create({
         name: "sweets",
-        photo_url: "",
+        photo_url: "/app/assets/images/dessert.jpg",
 	})
 
 foods = Food.all
@@ -60,15 +60,18 @@ foods.each do |food|
 	when "vegetables"
 		Winetype.create({
 			typeofwine: "Dry White",
+			graphic_url: "/app/assets/images/drywhite.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
 			typeofwine: "Sparkling",
+			graphic_url: "/app/assets/images/sparkling.jpg",
 			food_id: food.id
 			})
 	when "roastedvegetables"
 		Winetype.create({
 			typeofwine: "Dry White",
+			graphic_url: "/app/assets/images/drywhite.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -90,7 +93,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Sparkling",
-			food_id: food.id
+			graphic_url: "/app/assets/images/sparkling.jpg",			food_id: food.id
 			})
 		Winetype.create({
 			typeofwine: "Dessert",
@@ -99,6 +102,7 @@ foods.each do |food|
 	when "hard cheese"
 		Winetype.create({
 			typeofwine: "Dry White",
+			graphic_url: "/app/assets/images/drywhite.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -107,6 +111,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Sparkling",
+			graphic_url: "/app/assets/images/sparkling.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -116,6 +121,7 @@ foods.each do |food|
 	when "starches"
 		Winetype.create({
 			typeofwine: "Dry White",
+			graphic_url: "/app/assets/images/drywhite.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -124,6 +130,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Sparkling",
+			graphic_url: "/app/assets/images/sparkling.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -145,6 +152,7 @@ foods.each do |food|
 	when "fish"
 		Winetype.create({
 			typeofwine: "Dry White",
+			graphic_url: "/app/assets/images/drywhite.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -153,6 +161,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Sparkling",
+			graphic_url: "/app/assets/images/sparkling.jpg",
 			food_id: food.id
 			})
 	when "rich fish"
