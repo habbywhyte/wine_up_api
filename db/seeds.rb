@@ -76,6 +76,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Light Red",
+			graphic_url: "/app/assets/images/lightred.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -135,6 +136,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Light Red",
+			graphic_url: "/app/assets/images/lightred.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -167,6 +169,7 @@ foods.each do |food|
 	when "rich fish"
 		Winetype.create({
 			typeofwine: "Light Red",
+			graphic_url: "/app/assets/images/lightred.jpg",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -184,6 +187,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Light Red",
+			graphic_url: "/app/assets/images/lightred.jpg",
 			food_id: food.id
 			})
 	when "red meat"
@@ -202,6 +206,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Light Red",
+			graphic_url: "/app/assets/images/lightred.jpg",
 			food_id: food.id
 			})
 		Winetype.create({

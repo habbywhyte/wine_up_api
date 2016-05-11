@@ -1,10 +1,11 @@
 class FoodsController < ApplicationController
   def index
     @foods = Food.all.order(:created_at) do
-      @wine_types = Winetype.find_all 
+      @winetypes = Winetype.find_all 
+    end
 
     # render json: @foods.to_json, status: :ok
-    render json: @foods, :include => [:@winetypes], status: :ok
+    render json: @foods.to_json(:include => { :winetypes => {:only => :typeofwine} }), status: :ok
   end
   def show
     @food = Food.find(params[:id])
@@ -37,9 +38,9 @@ class FoodsController < ApplicationController
   end
 
   private
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def food_params
-      params.require(:food).permit(:name, :photoUrl)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def food_params
+    params.require(:food).permit(:name, :photo_url)
+  end
 end
 
