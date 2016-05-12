@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   def index
     @foods = Food.all.order(:created_at) do
-      @winetypes = Winetype.find_all 
+      @winetypes = Winetype.find_all
     end
 
     # render json: @foods.to_json, status: :ok
@@ -9,7 +9,7 @@ class FoodsController < ApplicationController
   end
   def show
     @food = Food.find(params[:id])
-    render json: @food.to_json, status: :ok
+    render json: @food.to_json(:include => :winetypes ), status: :ok
   end
 
   def create
@@ -43,4 +43,3 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:name, :photo_url)
   end
 end
-
