@@ -60,7 +60,7 @@ foods.each do |food|
 	when "vegetables"
 		Winetype.create({
 			typeofwine: "Dry White",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.png",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -71,7 +71,7 @@ foods.each do |food|
 	when "roastedvegetables"
 		Winetype.create({
 			typeofwine: "Dry White",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.png",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -107,7 +107,7 @@ foods.each do |food|
 	when "hard cheese"
 		Winetype.create({
 			typeofwine: "Dry White",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.png",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -128,7 +128,7 @@ foods.each do |food|
 	when "starches"
 		Winetype.create({
 			typeofwine: "Dry White",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.png",
 			food_id: food.id
 			})
 		Winetype.create({
@@ -164,7 +164,7 @@ foods.each do |food|
 	when "fish"
 		Winetype.create({
 			typeofwine: "Dry White",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.png",
 			food_id: food.id
 			})
 		Winetype.create({
