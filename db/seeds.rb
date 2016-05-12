@@ -101,7 +101,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Dessert",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/dessert.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/port.jpg",
 			food_id: food.id
 			})
 	when "hard cheese"
@@ -158,7 +158,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Dessert",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/dessert.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/port.jpg",
 			food_id: food.id
 			})
 	when "fish"
@@ -238,7 +238,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Dessert",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/dessert.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/port.jpg",
 			food_id: food.id
 			})
 	when "sweets"
@@ -249,7 +249,7 @@ foods.each do |food|
 			})
 		Winetype.create({
 			typeofwine: "Dessert",
-			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/dessert.jpg",
+			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/port.jpg",
 			food_id: food.id
 			})
 	else
