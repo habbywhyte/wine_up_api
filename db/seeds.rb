@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# This would be much simpler and easier to maintain if you made it a JSON file. See: https://github.com/ga-wdi-exercises/shangriangula/blob/master/db/seeds.rb
+
+
 Winetype.destroy_all
 Food.destroy_all
 	Food.create({
@@ -56,6 +59,7 @@ Food.destroy_all
 foods = Food.all
 
 foods.each do |food|
+	# Interesting solution!
 	case food.name
 	when "vegetables"
 		Winetype.create({
@@ -63,6 +67,7 @@ foods.each do |food|
 			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/drywhite.png",
 			food_id: food.id
 			})
+		# You can actually just do `food: food` -- no need to mention IDs. ActiveRecord takes care of this for you.
 		Winetype.create({
 			typeofwine: "Sparkling",
 			graphic_url: "http://img.photobucket.com/albums/v201/BarracksSi/wine_up/sparkling.jpg",

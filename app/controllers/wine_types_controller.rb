@@ -1,4 +1,6 @@
 class WineTypesController < ApplicationController
+  # Shaaaaaaame for using `rails g`. These two wine types controllers are identical and could potentially cause a lot of problems.
+  # Only use shortcuts if you understand what they do.
   def index
     # @food = Food.find(params[:food_id])
     @wine_types = Winetype.all.order(:created_at)
